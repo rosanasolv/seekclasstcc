@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 //conexão com o banco de dados
-const sequelize = new Sequelize('sistemaSeekClass', 'root', '123456', {
+const sequelize = new Sequelize('sistemaSeekClass', 'root', '1234', {
     host: "localhost", 
     dialect: "mysql"
 });

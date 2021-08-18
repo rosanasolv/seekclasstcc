@@ -26,8 +26,8 @@ const Usuario = sequelize.define('usuarios', {
 });
 
 Usuario.create({
-    nome: "José Neto Lima Nascimento",
-    email: "netolima1992@gmail.com"
+    nome: "Rosana da Silva Soares",
+    email: "rosana.soares@estudante.ifb.edu.br"
 });
 //
 //Usuario.sync({force: true});

@@ -16,7 +16,7 @@ function teste() {
 	alert("aq");
 	Usuario.findOne({
 		where: {
-		  email: "jose.nascimento@estudante.ifb.edu.br"
+		  email: "rosana.soares@estudante.ifb.edu.br"
 		  //senha: req.body.senha
 		}
 	}).then((usuario)=>{

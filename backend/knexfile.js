@@ -5,7 +5,7 @@ module.exports = {
     connection: {
       database: 'seekclass',
       user:     'root',
-      password: '123456'
+      password: '1234'
     },
     pool: {
       min: 2,
