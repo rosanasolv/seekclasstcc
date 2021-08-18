@@ -1,0 +1,22 @@
+Backend(API) {
+	NodeJs,
+	Express.Js,
+	nodemon
+}
+Banco de dados {
+	MySQL {
+		mysql2,
+		knex
+	}
+}
+Frontend {
+	HTML {
+		Vue
+	},
+	CSS {
+		Bulma, Bootstrap Vue, font-awesome
+	},
+	JavaScript{
+		VueJs, vue-router, axios
+	}	
+}

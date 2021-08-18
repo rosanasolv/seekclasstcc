@@ -1,0 +1,148 @@
+<b-row>
+    <b-col sm="9" v-if="selected===3">
+      <b-card>
+        <img src="@/assets/terreoifb.png" alt="Mapa" />
+
+        <img id="Cantina" class="estados" alt="Cantina"
+        @load="posicionar('Cantina', '9%', '58%')"
+        @mouseover="algumacoisa(Cantina, Cantina.posicaoL, Cantina.posicaoT, 'Cantina')"
+        @mouseout="limpar('Cantina')"
+        src="@/assets/local1.png"
+        />
+        <img id="Biblioteca" class="estados" alt="Biblioteca"
+        @load="posicionar('Biblioteca', '59%', '43%')"
+        @mouseover="algumacoisa(Biblioteca, Biblioteca.posicaoL, Biblioteca.posicaoT, 'Biblioteca')"
+        @mouseout="limpar('Biblioteca')"
+        src="@/assets/local1.png"
+        />
+        <img id="Recepcao" class="estados" alt="Biblioteca"
+        @load="posicionar('Recepcao', '67%', '80%')"
+        @mouseover="algumacoisa(Recepcao, Recepcao.posicaoL, Recepcao.posicaoT, 'Recepcao')"
+        @mouseout="limpar('Recepcao')"
+        src="@/assets/local1.png"
+        />
+        <img id="Ginasio" class="estados" alt="Biblioteca"
+        @load="posicionar('Ginasio', '90%', '41%')"
+        @mouseover="algumacoisa(Ginasio, Ginasio.posicaoL, Ginasio.posicaoT, 'Ginasio')"
+        @mouseout="limpar('Ginasio')"
+        src="@/assets/local1.png"
+        />
+        <img id="BanheirosT" class="estados" alt="Banheiros Térreo"
+        @load="posicionar('BanheirosT', '48%', '26%')"
+        @mouseover="algumacoisa(BanheirosT, BanheirosT.posicaoL, BanheirosT.posicaoT, 'BanheirosT')"
+        @mouseout="limpar('BanheirosT')"
+        src="@/assets/local1.png"
+        />
+        <img id="Armarios" class="estados" alt="Armários"
+        @load="posicionar('Armarios', '9%', '38%')"
+        @mouseover="algumacoisa(Armarios, Armarios.posicaoL, Armarios.posicaoT, 'Armarios')"
+        @mouseout="limpar('Armarios')"
+        src="@/assets/local1.png"
+        />
+      </b-card>
+      
+      <div id="descricao" class="notification is-link">
+        <button class="delete" @click="limpar(cart.sigla)"></button>
+        <p>Sala: {{ cart.Sala }}</p>
+        <p>Caminho: {{ cart.Caminho }}</p>
+      </div>
+    </b-col>
+    <b-col sm="9" v-else-if="selected===null">
+      <b-card class="mapaandar">
+        <img src="@/assets/1andar.png" alt="Mapa" />
+
+        <img id="BlocoB1A" class="estados" alt="Bloco B 1º Andar"
+        @load="posicionar('BlocoB1A', '10%', '1%')"
+        @mouseover="algumacoisa(BlocoB1A, BlocoB1A.posicaoL, BlocoB1A.posicaoT, 'BlocoB1A')"
+        @mouseout="limpar('BlocoB1A')"
+        src="@/assets/local1.png"
+        />
+        <img id="BlocoC1A" class="estados" alt="Bloco C 1º Andar"
+        @load="posicionar('BlocoC1A', '85%', '1%')"
+        @mouseover="algumacoisa(BlocoC1A, BlocoC1A.posicaoL, BlocoC1A.posicaoT, 'BlocoC1A')"
+        @mouseout="limpar('BlocoC1A')"
+        src="@/assets/local1.png"
+        />
+        <img id="BlocoD1A" class="estados" alt="Bloco D 1º Andar"
+        @load="posicionar('BlocoD1A', '85%', '55%')"
+        @mouseover="algumacoisa(BlocoD1A, BlocoD1A.posicaoL, BlocoD1A.posicaoT, 'BlocoD1A')"
+        @mouseout="limpar('BlocoD1A')"
+        src="@/assets/local1.png"
+        />
+      </b-card>
+
+      <b-card class="mapaandar">
+        <center><h3>Salas do 1º andar</h3></center>
+        <img src="@/assets/salas1andar.png" alt="Mapa" />
+      </b-card>
+      
+      <div id="descricao" class="notification is-link">
+        <button class="delete" @click="limpar(cart.sigla)"></button>
+        <p>Sala: {{ cart.Sala }}</p>
+        <p>Caminho: {{ cart.Caminho }}</p>
+        
+      </div>
+    </b-col>
+
+    <b-col sm="9" v-else-if="selected===2">
+      <b-card class="mapaandar">
+        <img src="@/assets/2andar.png" alt="Mapa" />
+      </b-card>
+      <b-card>
+        <center><h3>Salas do 2º andar</h3></center>
+        <img src="@/assets/salas2andar.png" alt="Mapa" />
+      </b-card>
+      
+      <div id="descricao" class="notification is-link">
+        <button class="delete" @click="limpar(cart.sigla)"></button>
+        <p>Sala: {{ cart.Sala }}</p>
+        <p>Caminho: {{ cart.Caminho }}</p>
+        
+      </div>
+    </b-col>
+    
+    <b-col sm="3">
+      <div class="selected">
+        <b-form-select v-model="selected" :options="options"></b-form-select>
+      </div>
+      <b-card
+        id="cardAm"
+        title="Informações:"
+        tag="article"
+        style="max-width: 20rem"
+        class="mb-2"
+      >
+        <b-card-text>
+          <p>Sala: {{ cart.Sala }}</p>
+          <p>Caminho: {{ cart.Caminho }}</p>
+        </b-card-text>
+      </b-card>
+      
+      <b-card 
+        id="cardEstados"
+        title="Salas:"
+        tag="article"
+        style="max-width: 20rem"
+        class="mb-2"
+      >
+        <b-card-text v-show="selected===null">
+          <a class="linkEstados" @click="algumacoisa(Cantina, Cantina.posicaoL, Cantina.posicaoT, 'Cantina')" >Cantina</a> <br/>
+          <a class="linkEstados" @click="algumacoisa(Biblioteca, Biblioteca.posicaoL, Biblioteca.posicaoT, 'Biblioteca')" >Biblioteca</a> <br/>
+          <a class="linkEstados" @click="algumacoisa(Recepcao, Recepcao.posicaoL, Recepcao.posicaoT, 'Recepcao')" >Recepção</a> <br/>
+          <a class="linkEstados" @click="algumacoisa(Ginasio, Ginasio.posicaoL, Ginasio.posicaoT, 'Ginasio')" >Ginásio</a> <br/>
+          <a class="linkEstados" @click="algumacoisa(BanheirosT, BanheirosT.posicaoL, BanheirosT.posicaoT, 'BanheirosT')" >Banheiros Térreo</a> <br/>
+          <a class="linkEstados" @click="algumacoisa(Armarios, Armarios.posicaoL, Armarios.posicaoT, 'Armarios')" >Armários</a> <br/>
+        </b-card-text>
+        <b-card-text v-show="selected===null">
+          <a class="linkEstados" @click="algumacoisa(BlocoB1A, BlocoB1A.posicaoL, BlocoB1A.posicaoT, 'BlocoB1A')" >Bloco B</a> <br/>
+          <a class="linkEstados" @click="algumacoisa(BlocoC1A, BlocoC1A.posicaoL, BlocoC1A.posicaoT, 'BlocoC1A')" >Bloco C</a> <br/>
+          <a class="linkEstados" @click="algumacoisa(BlocoD1A, BlocoD1A.posicaoL, BlocoD1A.posicaoT, 'BlocoD1A')" >Bloco D</a> <br/>
+        </b-card-text>
+
+      </b-card>
+    </b-col>
+  </b-row>
+
+
+
+  

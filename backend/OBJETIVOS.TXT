@@ -1,0 +1,59 @@
+MELHORAR DESIGN DA OUTRAS PÁGINAS (bootstrap);
+*CRIAR TABELA DE HORARIOS;
+*CRIAR TABELA DE USUÁRIOS; feito
+CIAR TABELA MATERIAS;
+CRIAR TABELA TURMA;
+*CRIAR PÁGINA DE CRIAR SENHAS(ACESSO PELA PRIMEIRA VEZ); feito
+*CRIAR ROTAS DE NAVEGAÇÃO; feito
+*CRIAR AUTENTICAÇÃO DE LOGIN; feito
+*criar coluna status tipo boolean; feito
+pesquisar sobre gerar um link de recuperação de senha e enviar pro usuário;
+pesquisar como criar um janela para notificações de restrições;
+comentar o código;
+
+
+
+caminho para o banco de dados mysql
+C:\ProgramData\MySQL\MySQL Server 8.0\Data\seekclass
+INSERT INTO seekclass.disciplinas SELECT * from seekclass2.disciplinas
+mysql -h localhost -u root -p
+show databases;
+use sistemaseekclass;
+show tables;
+select * from usuarios;
+
+
+npm install -g @vue/cli
+npm install 
+
+npm run serve
+npm start
+
+create table gradePessoal
+
+
+
+1- modelar a tabela avisos 
+2- remodelar a tabela usuarios 
+3- modelar a tabela professor (se precisar crair uma) 
+4- criar tabela de avisos no banco de dados (pré-requisito: 1, 2)
+5- fazer verificações e restrições no frontend 
+6- atualizar tabela de matérias no banco de dados
+7- organizar grade horaria para exibição correta no frontend(pré-requisito: 6)
+8- fazer push de notificações para email(pré-requisito: 4)
+9- criar página de exibição de avisos no frontend(pré-requisito: 4)
+10- fazer a página de recuperação de senha
+11- arrumar o titulo na página de LOGIN
+12- arrumar o loading quando aperta f5 para evitar perda de dados redenrizados nos select
+
+
+
+
+
+
+fazer a página de recuperação de senha
+fazer push de notificações para email
+organizar grade horaria para exibição correta no frontend
+permitir que um usuario normal mande notificação
+
+
